@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="POCsXamarinForms.MenuPage">
+	<ContentPage.Content>
+
+	</ContentPage.Content>
+	<StackLayout >
+		<Button Text="User Master" x:Name="btnUsrMaster" TextColor="Blue"/>
+		<Button Text="Task Master" x:Name="btnTskMaster" TextColor="Blue"/>
+		<Button Text="Images" x:Name="btnImages" TextColor="Blue"/>
+		<Button Text="Bindings" x:Name="btnBindings" TextColor="Blue"/>
+	</StackLayout> 
+</ContentPage>

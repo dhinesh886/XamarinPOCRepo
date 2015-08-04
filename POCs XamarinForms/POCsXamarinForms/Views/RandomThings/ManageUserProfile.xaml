@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="POCsXamarinForms.ManageUserProfile">
+ 
+	<ContentPage.Content>
+		<Grid Grid.Column="2">
+	    <Grid.ColumnDefinitions>
+	        <ColumnDefinition Width="100"/>
+	        <ColumnDefinition Width="*" />
+	    </Grid.ColumnDefinitions>
+	    <Grid.RowDefinitions>
+	        <RowDefinition Height="Auto"/>
+	        <RowDefinition Height="Auto"/>
+	        <RowDefinition Height="Auto"/>
+	        <RowDefinition Height="Auto"/>
+	        <RowDefinition Height="Auto"/>
+	    </Grid.RowDefinitions>
+	    	<Label Text="Name" VerticalOptions="Center"    Grid.Row="0" Grid.Column="0" />
+			<Entry x:Name="etyName" Text="{Binding Name}" Grid.Row="0" Grid.Column="1"/>
+
+			<Label Text="User Id" VerticalOptions="Center"    Grid.Row="1" Grid.Column="0" />
+			<Entry x:Name="etyUserId" Text="{Binding UserId}" Grid.Row="1" Grid.Column="1"/>
+
+			<Label Text="Password" VerticalOptions="Center" Grid.Row="2" Grid.Column="0"/>
+			<Entry x:Name="etyPassword"  Text="{Binding Password}" Grid.Row="2" Grid.Column="1"/>
+
+			<Label Text="Suspend" VerticalOptions="Center" Grid.Row="3" Grid.Column="0"/>
+			<Switch x:Name="swhDone" IsToggled="{Binding IsSuspened}" Grid.Row="3" Grid.Column="1"/>
+
+			<Grid Grid.Row="4" Grid.Column="0">
+  				<Image Source ="gray-thin-button-blank-th.png"/>
+   				<Button x:Name="btnSave"  Text= " Save "   />
+			</Grid>
+			<Grid Grid.Row="4" Grid.Column="1">
+  				<Image Source ="gray-thin-button-blank-th.png"/>
+   				<Button x:Name="btnDelete" Text=" Delete "  />
+			</Grid>
+			<Grid Grid.Row="5" Grid.Column="0">
+  				<Image Source ="gray-thin-button-blank-th.png"/>
+   				<Button x:Name="btnCancel"  Text=" Cancel " />
+			</Grid>
+		 </Grid>
+	</ContentPage.Content> 
+</ContentPage>

@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage 	xmlns="http://xamarin.com/schemas/2014/forms" 
+				xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+				x:Class="POCsXamarinForms.RandomThingsForm1"
+				Padding="10, 10, 10, 10"
+				Title ="Task Detail">
+<!--				 <ContentPage.Resources>
+        <ResourceDictionary>
+            <Style x:Key="labelStyle" TargetType="Label">
+                <Setter Property="TextColor" Value="Green" />
+            </Style>
+             <Style x:Key="buttonStyle" TargetType="Button">
+             <Setter Property="BackgroundColor" Value="Gainsboro" />
+                <Setter Property="TextColor" Value="DarkGray" />
+            </Style>
+        </ResourceDictionary>
+    </ContentPage.Resources>-->
+	<ContentPage.Content>
+		<Grid Grid.Column="2">
+	    <Grid.ColumnDefinitions>
+	        <ColumnDefinition Width="100"/>
+	        <ColumnDefinition Width="*" />
+	    </Grid.ColumnDefinitions>
+	    <Grid.RowDefinitions>
+	        <RowDefinition Height="Auto"/>
+	        <RowDefinition Height="Auto"/>
+	        <RowDefinition Height="Auto"/>
+	        <RowDefinition Height="Auto"/>
+	        <RowDefinition Height="Auto"/>
+	    </Grid.RowDefinitions>
+			<Label Text="Name" VerticalOptions="Center"   Style="{StaticResource labelStyle}"  Grid.Row="0" Grid.Column="0" />
+			<Entry x:Name="etyName" Text="{Binding Name}" Grid.Row="0" Grid.Column="1"/>
+
+			<Label Text="Note" VerticalOptions="Center" Grid.Row="1" Grid.Column="0"/>
+			<Entry x:Name="etyNote"  Text="{Binding Notes}" Grid.Row="1" Grid.Column="1"/>
+
+			<Label Text="Done" VerticalOptions="Center" Grid.Row="2" Grid.Column="0"/>
+			<Switch x:Name="swhDone" IsToggled="{Binding Done}" Grid.Row="2" Grid.Column="1"/>
+
+			<Button x:Name="btnSave" Text=" Save " Grid.Row="3" Grid.Column="0" Style="{StaticResource buttonStyle}" />
+			<Button x:Name="btnDelete" Text=" Delete " Grid.Row="3" Grid.Column="1"/>
+
+			<Button x:Name="btnCancel" Text=" Cancel " Grid.Row="4" Grid.Column="0"/>
+			<Button x:Name="btnSpeak" Text=" Speak " Grid.Row="4" Grid.Column="1"/> 
+		 </Grid>
+	</ContentPage.Content> 
+</ContentPage>

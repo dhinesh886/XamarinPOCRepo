@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage 	xmlns="http://xamarin.com/schemas/2014/forms" 
+				xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+				x:Class="POCsXamarinForms.RandomThings1"
+				Title="Task List"
+				>
+
+	<ListView x:Name="listView" >
+    <ListView.ItemTemplate>
+      <DataTemplate>
+        <ViewCell>
+          <StackLayout Orientation="Horizontal"
+                       Padding="10,10,10,10">
+            <Label Text="{Binding Name}"
+                   HorizontalOptions="StartAndExpand"
+                   VerticalOptions="Center" /> 
+            <Image Source="check.png" IsVisible="{Binding Done}" />
+          </StackLayout>
+        </ViewCell>
+      </DataTemplate>
+    </ListView.ItemTemplate>
+  </ListView>
+	
+<ContentPage.ToolbarItems >
+	 <ToolbarItem 	Text="Add"
+	 				Order="Primary"
+	 				Clicked="OnPlusClicked">
+ 		<ToolbarItem.Icon >
+
+			<OnPlatform x:TypeArguments="FileImageSource" 
+						iOS = "ada_small.png"
+		 				Android="ic_action_edit.png"
+		 				WinPhone="Images/edit.png" />
+		</ToolbarItem.Icon>
+ 	</ToolbarItem>
+ </ContentPage.ToolbarItems>
+</ContentPage>

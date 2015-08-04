@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+x:Class="POCsXamarinForms.Login"
+Title="Login">
+	<ContentPage.Content> 
+	</ContentPage.Content> 
+	<Grid Grid.Column="2" VerticalOptions="Center" HorizontalOptions="Center" >
+	    <Grid.ColumnDefinitions>
+	        <ColumnDefinition Width="100"/>
+	        <ColumnDefinition Width="*" />
+	    </Grid.ColumnDefinitions>
+	    <Grid.RowDefinitions>
+	        <RowDefinition Height="Auto"/>
+	        <RowDefinition Height="Auto"/>
+	        <RowDefinition Height="Auto"/>
+	        <RowDefinition Height="Auto"/> 
+	    </Grid.RowDefinitions>
+			<Label Text="User Id" VerticalOptions="Center"    Grid.Row="0" Grid.Column="0" />
+			<Entry x:Name="etyUserId"  Grid.Row="0" Grid.Column="1"/>
+
+			<Label Text="Password" VerticalOptions="Center" Grid.Row="1" Grid.Column="0"/>
+			<Entry x:Name="etyPassword" IsPassword="true"  Grid.Row="1" Grid.Column="1"/>
+
+			<Grid Grid.Row="3" Grid.Column="1">
+  				<Image Source ="gray-thin-button-blank-th.png"/>
+   				<Button x:Name="btnLogin"  Text= " Login "   />
+			</Grid>
+
+			<Label x:Name="lblMessage" VerticalOptions="Center"    Grid.Row="4" Grid.ColumnSpan="2" />
+		 </Grid>
+ <ContentPage.ToolbarItems > 
+ </ContentPage.ToolbarItems>
+</ContentPage>

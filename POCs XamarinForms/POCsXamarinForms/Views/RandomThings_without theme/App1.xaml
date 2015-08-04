@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Application
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="POCsXamarinForms.App1">
+    <Application.Resources>
+        <ResourceDictionary>
+            <Style x:Key="labelStyle" TargetType="Label">
+                <Setter Property="TextColor" Value="Green" />
+            </Style>
+            <Style x:Key="buttonStyle" TargetType="Button">
+                <Setter Property="TextColor" Value="Green" />
+            </Style>
+            <Style x:Key="visualStyle" TargetType="VisualElement">
+ 				<Setter Property="BackgroundColor" Value="Gray" />
+ 			</Style>
+            <Style x:Key="baseStyle" TargetType="View" BasedOn="{StaticResource visualStyle}">
+				<Setter Property="HorizontalOptions" Value="Center" />
+				<Setter Property="VerticalOptions" Value="CenterAndExpand" />
+
+			</Style>
+            <Style TargetType="Button" BasedOn="{StaticResource baseStyle}">
+				<Setter Property="TextColor" Value="Black" /> 
+				<Setter Property="BorderColor" Value="Black" />
+				<Setter Property="BorderWidth" Value="1" />
+			</Style>
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>

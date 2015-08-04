@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="POCsXamarinForms.WorkingWithBindings"
+xmlns:sys="clr-namespace:System;assembly=mscorlib">
+	<ContentPage.Content>
+	</ContentPage.Content>
+	<StackLayout BindingContext="{x:Static sys:DateTime.Now}"
+               HorizontalOptions="Center"
+               VerticalOptions="Center">
+        <Button Text="DirectBinding" x:Name="btnDirectBinding" TextColor="Blue"/>
+		<Button Text="Simple MVVM Binding" x:Name="btnSMVVMBinding" TextColor="Blue"/>
+		<Button Text="Interactive MVVM Binding" x:Name="btnIMVVMBinding" TextColor="Blue"/>
+		<Button Text="Commanding in MVVM" x:Name="btnCMVVMBinding" TextColor="Blue"/>
+     
+  </StackLayout>
+</ContentPage>
